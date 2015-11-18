@@ -16,3 +16,6 @@ Installation
 
 >	vim +BundleInstall +qall
 
+4. Wait for installing plugins
+
+>	Have some tea
