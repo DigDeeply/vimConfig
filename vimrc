@@ -209,5 +209,5 @@ function TitleDet()
     call AddTitle()
 endfunction 
 
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='hybrid'
+let g:airline#extensions#tabline#enabled = 0
+let g:airline_theme='luna'
