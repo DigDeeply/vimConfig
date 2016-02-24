@@ -1,0 +1,26 @@
+shell -$SHELL
+
+hardstatus on
+hardstatus alwayslastline 
+hardstatus string '%{=b cw}%-w%{=rb db}%>%n %t%{-}%+w%{-b}%< %{= kG}%-=@fukun %m/%d%{-}'
+
+#hardstatus alwayslastline  " %-Lw%{= Bw}%n%f %t%{-}%+Lw %=| %0c:%s "
+#hardstatus string "%{.bW}%-w%{.rY}%n %t%{-}%+w %=%{..G} %H(%l) %{..Y} %m/%d %c:%s "
+#hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
+#hardstatus string '%{= mK}%-Lw%{= KW}%50>%n%f* %t%{= mK}%+Lw%< %{= kG}%-=%D %d %M %Y %c:%s%{-}'
+
+# 屏幕缓冲区 4096 行。
+defscrollback 4096
+
+# Refresh the display when exiting programs like vim, nano, irssi and etc
+altscreen on
+
+# caption always '%{=b cw}%-w%{=rb db}%>%n %t%{-}%+w%{-b}%< %{= kG}%-=%D %c%{-}'
+#caption always "%{= bk} %{= bY} [%n]%t @ %H %{-} %= %{= bR} %l %{-} | %{= KG} %Y-%m-%d %{-} "
+shelltitle '$ |bash'
+
+escape ^L^L
+escape ^Ll #Instead of control-a
+
+defencoding UTF-8
+encoding UTF-8
