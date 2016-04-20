@@ -128,6 +128,13 @@ set number
 "自动缩进
 :set sw=4
 
+"show existing tab with 4 spaces width
+:set tabstop=4
+"when indenting with '>', use 4 spaces width
+:set shiftwidth=4
+"On pressing tab, insert 4 spaces
+:set expandtab
+
 "C/C++ 风格的自动缩进
 :set cin
 
