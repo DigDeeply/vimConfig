@@ -177,6 +177,9 @@ cmap <C-r>p !php % <CR>
 cmap <C-r>l !php -l % <CR>
 nmap <silent> <C-g>g :NERDTreeToggle<CR>
 
+"快速编辑buffer
+nmap   <F5> :ls<CR>:e #
+
 set statusline=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
 " Status Line
 if has('statusline')
