@@ -175,6 +175,7 @@ let @p='"0p' "用于快捷的粘贴寄存器0的数据
 cmap <C-r>c !gcc % && ./a.out<CR>
 cmap <C-r>p !php % <CR>
 cmap <C-r>l !php -l % <CR>
+cmap <C-r>g !go run % <CR>
 nmap <silent> <C-g>g :NERDTreeToggle<CR>
 
 "快速编辑buffer
