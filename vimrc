@@ -121,6 +121,7 @@ filetype plugin indent on
 
 "显示行号
 set number
+set relativenumber
 
 "Tab 宽度
 :set ts=4
