@@ -20,7 +20,7 @@ Installation
 
 >	Have some tea
 
-* Install oh-my-zsh with Curl
+* Install oh-my-zsh with Curl; with error message: "Zsh is not installed! Please install zsh first!"; try to install zsh, yum install zsh || apt-get install zsh
 
 > sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
