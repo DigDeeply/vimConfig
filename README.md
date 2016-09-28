@@ -20,6 +20,10 @@ Installation
 
 >	Have some tea
 
+* if lost vim theme "luna.vim", try
+
+> wget "https://raw.githubusercontent.com/vim-airline/vim-airline-themes/master/autoload/airline/themes/luna.vim" -O ~/.vim/bundle/vim-airline/autoload/airline/themes/luna.vim
+
 * Install oh-my-zsh with Curl; with error message: "Zsh is not installed! Please install zsh first!"; try to install zsh, yum install zsh || apt-get install zsh
 
 > sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
