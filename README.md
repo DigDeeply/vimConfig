@@ -19,3 +19,11 @@ Installation
 * Wait for installing plugins
 
 >	Have some tea
+
+* Install oh-my-zsh with Curl
+
+> sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+* link .zshrc config
+
+> ln -s ~/vimConfig/zshrc ~/.zshrc
