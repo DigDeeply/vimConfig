@@ -41,6 +41,9 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'YankRing.vim'
 Bundle 'Blackrush/vim-gocode'
+"解决yaml syntax卡顿问题
+Bundle 'git@github.com:stephpy/vim-yaml.git' 
+
 "Bundle 'FencView.vim'
 "Bundle 'SuperTab'
 "Bundle 'c.vim'
