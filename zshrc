@@ -5,7 +5,8 @@ export ZSH=/home/fukun/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="robbyrussell"
+ZSH_THEME="gentoo"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -87,7 +88,7 @@ export LC_ALL=zh_CN.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-PROMPT='%{$fg_bold[green]%}%p%{$fg[cyan]%}%d %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%}% %{$reset_color%}>'
+#PROMPT='%{$fg_bold[green]%}%p%{$fg[cyan]%}%d %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%}% %{$reset_color%}>'
 #PROMPT='%{$fg_bold[red]%}->%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
 
 #alias for cnpm
@@ -98,8 +99,7 @@ alias cnpm="npm --registry=https://registry.npm.taobao.org \
 
 #disable auto set screen title.
 DISABLE_AUTO_TITLE="true"
-export GOROOT=/usr/local/go
-export GOPATH=/home/s/www/fukun/gopath:/home/s/www/fukun/gopath/sorter:/home/s/www/fukun/gopath/photoweb:/home/s/www/fukun/github
+#export GOROOT=/usr/local/go
 
 #setopt
 setopt autopushd    #cd stack, use `cd -<TAB>`  for quickly enter the dir in history.
