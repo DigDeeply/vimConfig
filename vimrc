@@ -29,10 +29,9 @@ Plugin 'VundleVim/Vundle.vim'
 "Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " 安装L9，如果已经安装过这个插件，可利用以下格式避免命名冲突
 "Plugin 'ascenator/L9', {'name': 'newL9'}
-Plugin 'taglist.vim'
-Plugin 'winmanager'
-Plugin 'bufexplorer.zip'
-Plugin 'The-NERD-tree'
+"Plugin 'bufexplorer.zip'
+Plugin 'jlanzarotta/bufexplorer' " \be 查看buffer
+Plugin 'scrooloose/nerdtree'
 Plugin 'Markdown'
 Plugin 'Align'
 Plugin 'mileszs/ack.vim'
@@ -185,7 +184,7 @@ cmap <C-r>g !go run % <CR>
 nmap <silent> <C-g>g :NERDTreeToggle<CR>
 
 "快速编辑buffer
-nmap   <F5> :ls<CR>:e #
+nmap   <C-l>b <leader>bt
 "展示tags
 nmap <F8> :TagbarToggle<CR>
 
