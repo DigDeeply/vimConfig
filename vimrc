@@ -1,71 +1,73 @@
 set nocompatible               " be iMproved
 filetype off                   " required!       /**  从这行开始，vimrc配置 **/
 
-" vundle {
-set rtp+=~/.vim/bundle/vundle/
-" 如果在windows下使用的话，设置为 
-" set rtp+=$HOME/.vim/bundle/vundle/
-call vundle#rc()
-" }
-"
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
+" 设置包括vundle和初始化相关的runtime path
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" 另一种选择, 指定一个vundle安装插件的路径
+"call vundle#begin('~/some/path/here')
+
+" 让vundle管理插件版本,必须
+Plugin 'VundleVim/Vundle.vim'
 
 " My Bundles here:
 "
-" original repos on github
-" github上的用户写的插件，使用这种用户名+repo名称的方式
-" Bundle 'tpope/vim-fugitive'
-" Bundle 'Lokaltog/vim-easymotion'
-" Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Bundle 'tpope/vim-rails.git'
-" vim-scripts repos
-" vimscripts的repo使用下面的格式，直接是插件名称
-Bundle 'taglist.vim'
-Bundle 'winmanager'
-Bundle 'bufexplorer.zip'
-Bundle 'The-NERD-tree'
-Bundle 'Markdown'
-Bundle 'Align'
-Bundle 'mileszs/ack.vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'mattn/emmet-vim'
-Bundle 'tmhedberg/matchit'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'tpope/vim-surround'
-Bundle 'scrooloose/syntastic'
-Bundle 'bling/vim-airline'
-Bundle 'tpope/vim-fugitive'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'YankRing.vim'
-Bundle 'Blackrush/vim-gocode'
+" 以下范例用来支持不同格式的插件安装.
+" 请将安装插件的命令放在vundle#begin和vundle#end之间.
+" Github上的插件
+" 格式为 Plugin '用户名/插件仓库名'
+"Plugin 'tpope/vim-fugitive'
+" 来自 http://vim-scripts.org/vim/scripts.html 的插件
+" Plugin '插件名称' 实际上是 Plugin 'vim-scripts/插件仓库名' 只是此处的用户名可以省略
+"Plugin 'L9'
+" 由Git支持但不再github上的插件仓库 Plugin 'git clone 后面的地址'
+"Plugin 'git://git.wincent.com/command-t.git'
+" 本地的Git仓库(例如自己的插件) Plugin 'file:///+本地插件仓库绝对路径'
+"Plugin 'file:///home/gmarik/path/to/plugin'
+" 插件在仓库的子目录中.
+" 正确指定路径用以设置runtimepath. 以下范例插件在sparkup/vim目录下
+"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" 安装L9，如果已经安装过这个插件，可利用以下格式避免命名冲突
+"Plugin 'ascenator/L9', {'name': 'newL9'}
+Plugin 'taglist.vim'
+Plugin 'winmanager'
+Plugin 'bufexplorer.zip'
+Plugin 'The-NERD-tree'
+Plugin 'Markdown'
+Plugin 'Align'
+Plugin 'mileszs/ack.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'tmhedberg/matchit'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/syntastic'
+Plugin 'bling/vim-airline'
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'YankRing.vim'
+Plugin 'Blackrush/vim-gocode'
 "解决yaml syntax卡顿问题
-Bundle 'git@github.com:stephpy/vim-yaml.git' 
-
-"Bundle 'FencView.vim'
-"Bundle 'SuperTab'
-"Bundle 'c.vim'
-
-" non github reposo
-" 非github的插件，可以直接使用其git地址
-" Bundle 'git://git.wincent.com/command-t.git'
-" ...
+Plugin 'git@github.com:stephpy/vim-yaml.git' 
+Plugin 'majutsushi/tagbar'
 
 "
-" Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
-" vundle主要就是上面这个四个命令，例如BundleInstall是全部重新安装，BundleInstall!则是更新
-" 一般安装插件的流程为，先BundleSearch一个插件，然后在列表中选中，按i安装
-" 安装完之后，在vimrc中，添加Bundle 'XXX'，使得bundle能够加载，这个插件，同时如果
-" 需要配置这个插件，也是在vimrc中设置即可
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed..
+call vundle#end()            " 必须
+filetype plugin indent on    " 必须 加载vim自带和插件相应的语法和文件类型相关脚本
+" 忽视插件改变缩进,可以使用以下替代:
+"filetype plugin on
 "
+" 简要帮助文档
+" :PluginList       - 列出所有已配置的插件
+" :PluginInstall    - 安装插件,追加 `!` 用以更新或使用 :PluginUpdate
+" :PluginSearch foo - 搜索 foo ; 追加 `!` 清除本地缓存
+" :PluginClean      - 清除未使用插件,需要确认; 追加 `!` 自动批准移除未使用插件
+"
+" 查阅 :h vundle 获取更多细节和wiki以及FAQ
+" 将你自己对非插件片段放在这行之后
+
+
 "
 "
 "
@@ -184,6 +186,9 @@ nmap <silent> <C-g>g :NERDTreeToggle<CR>
 
 "快速编辑buffer
 nmap   <F5> :ls<CR>:e #
+"展示tags
+nmap <F8> :TagbarToggle<CR>
+
 
 set statusline=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
 " Status Line

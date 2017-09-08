@@ -5,7 +5,7 @@ Installation
 ---------------------
 * CheckOut
 
->	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/vundle    
+>	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 >	git clone git@github.com:DigDeeply/vimConfig.git	~/vimConfig
 
 * Link vimrc file and the screen file
@@ -14,7 +14,7 @@ Installation
 
 * Install plugins
 
->	vim +BundleInstall +qall
+>	vim +PluginInstall +qall
 
 * Wait for installing plugins
 
