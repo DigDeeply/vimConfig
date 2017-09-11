@@ -49,7 +49,10 @@ Plugin 'YankRing.vim'
 Plugin 'Blackrush/vim-gocode'
 "解决yaml syntax卡顿问题
 Plugin 'git@github.com:stephpy/vim-yaml.git' 
+"函数,变量 map
 Plugin 'majutsushi/tagbar'
+"快速对齐
+Plugin 'godlygeek/tabular'
 
 "
 call vundle#end()            " 必须
