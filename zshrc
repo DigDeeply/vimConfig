@@ -6,7 +6,7 @@ export ZSH=/home/fukun/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="robbyrussell"
-ZSH_THEME="gentoo"
+ZSH_THEME="ys"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -61,6 +61,8 @@ source $ZSH/oh-my-zsh.sh
 
 # svn editor
 export SVN_EDITOR=vim
+# git editor
+export GIT_EDITOR=vim
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -103,3 +105,5 @@ DISABLE_AUTO_TITLE="true"
 
 #setopt
 setopt autopushd    #cd stack, use `cd -<TAB>`  for quickly enter the dir in history.
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
