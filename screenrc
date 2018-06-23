@@ -9,8 +9,8 @@ hardstatus string '%{=b cw}%-w%{=rb db}%>%n %t%{-}%+w%{-b}%< %{= kG}%-=@fukun %m
 #hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
 #hardstatus string '%{= mK}%-Lw%{= KW}%50>%n%f* %t%{= mK}%+Lw%< %{= kG}%-=%D %d %M %Y %c:%s%{-}'
 
-# 屏幕缓冲区 4096 行。
-defscrollback 4096
+# 屏幕缓冲区 14096 行。
+defscrollback 14096
 
 # Refresh the display when exiting programs like vim, nano, irssi and etc
 altscreen on
@@ -24,3 +24,5 @@ escape ^Ll #Instead of control-a
 
 defencoding UTF-8
 encoding UTF-8
+# mouse scroll
+termcapinfo xterm* ti@:te@
