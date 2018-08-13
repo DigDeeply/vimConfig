@@ -42,7 +42,6 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
-Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'YankRing.vim'
@@ -242,3 +241,6 @@ endfunction
 
 let g:airline#extensions#tabline#enabled = 0
 let g:airline_theme='luna'
+
+"修改vim-gocode默认的format工具为goreturns
+let g:gofmt_command = "goreturns"
