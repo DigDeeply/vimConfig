@@ -187,6 +187,8 @@ nmap <silent> <C-g>g :NERDTreeToggle<CR>
 
 "快速编辑buffer
 nmap   <C-l>b <leader>bt
+"隐藏行号和相对行号
+nmap <C-l>n :set nonu <bar> :set norelativenumber<CR>
 "展示tags
 nmap <F8> :TagbarToggle<CR>
 
