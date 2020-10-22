@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/fukun/.oh-my-zsh
+#export ZSH=/home/fukun/.oh-my-zsh
+export ZSH=/Users/fukun/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -50,12 +51,16 @@ ZSH_THEME="ys"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git autojump svn)
+plugins=(git autojump svn kubectl)
 
 # User configuration
 
-export PATH="/usr/local/go/bin/:/sbin:/usr/sbin:/usr/local/sbin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/home/s/bin::/home/s/ops/pantheon/tools:/usr/local/bin:/usr/local/sbin:/usr/local/bin/:/home/fukun/bin"
+
+export PATH="/usr/local/go/bin:/sbin:/usr/sbin:/usr/local/sbin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/home/s/bin::/home/s/ops/pantheon/tools:/usr/local/bin:/usr/local/sbin:/usr/local/bin/:/home/fukun/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
+
+# disable slashes when paste in macos iterm.
+DISABLE_MAGIC_FUNCTIONS=true
 
 source $ZSH/oh-my-zsh.sh
 
@@ -98,6 +103,8 @@ alias cnpm="npm --registry=https://registry.npm.taobao.org \
   --cache=$HOME/.npm/.cache/cnpm \
   --disturl=https://npm.taobao.org/dist \
   --userconfig=$HOME/.cnpmrc"
+alias noproxy='export http_proxy="" && export https_proxy=""'
+alias kx="kubectx"
 
 #disable auto set screen title.
 DISABLE_AUTO_TITLE="true"
@@ -107,3 +114,7 @@ DISABLE_AUTO_TITLE="true"
 setopt autopushd    #cd stack, use `cd -<TAB>`  for quickly enter the dir in history.
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+if [ -f ~/.addition.rc ]; then
+    source ~/.addition.rc
+fi
