@@ -52,6 +52,9 @@ Plugin 'git@github.com:stephpy/vim-yaml.git'
 Plugin 'majutsushi/tagbar'
 "快速对齐
 Plugin 'godlygeek/tabular'
+"rust
+Plugin 'rust-lang/rust.vim'
+
 
 "
 call vundle#end()            " 必须
