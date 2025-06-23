@@ -33,6 +33,8 @@ Installation
 
 > git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
 
+> brew install autojump  
+
 * link .zshrc config
 
 > ln -s ~/vimConfig/zshrc ~/.zshrc
